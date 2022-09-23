@@ -1,0 +1,2 @@
+[alias]
+    ls-subtrees = !"git log | grep git-subtree-dir | awk '{ print $2 }'"=

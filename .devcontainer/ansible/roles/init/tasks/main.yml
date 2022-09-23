@@ -1,0 +1,4 @@
+---
+- name: Install Liip OSX PHP
+  shell: curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6 creates=/usr/local/php5/bin/php
+

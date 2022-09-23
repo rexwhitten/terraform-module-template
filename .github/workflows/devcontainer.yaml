@@ -1,0 +1,12 @@
+name: 🤖 Dev Container Automation
+
+on: [pull_request_target, issues] 
+  paths: [ "./.devcontainer/**/*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Dev Container
+      run: docker build ./.devcontainer --file Dockerfile --tag my-image-name:$(date +%s)
